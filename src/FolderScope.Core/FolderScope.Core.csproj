@@ -1,0 +1,10 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace>FolderScope</RootNamespace>
+    <AssemblyName>FolderScope.Core</AssemblyName>
+    <Description>Folder scanning engine for FolderScope.</Description>
+  </PropertyGroup>
+
+</Project>

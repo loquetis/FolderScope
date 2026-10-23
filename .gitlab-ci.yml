@@ -1,0 +1,18 @@
+# Produces a self-contained FolderScope.exe for Windows 10/11 x64.
+stages:
+  - build
+
+variables:
+  DOTNET_CLI_TELEMETRY_OPTOUT: "1"
+  DOTNET_NOLOGO: "1"
+
+windows-exe:
+  stage: build
+  image: mcr.microsoft.com/dotnet/sdk:8.0
+  script:
+    - bash build/publish-win-x64.sh artifacts/win-x64
+  artifacts:
+    name: FolderScope-win-x64
+    paths:
+      - artifacts/win-x64/FolderScope.exe
+    expire_in: 30 days
